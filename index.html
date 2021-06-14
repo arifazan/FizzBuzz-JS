@@ -12,6 +12,9 @@
         <input type="text" id="inputNum" onblur="findFizzBuzz()" onfocus="clearLast()">
     </form>
 
+    <label>result: </label>
+    <label id="resultLabel"></label>
+
     <script>
         function findFizzBuzz(){
             var inputCount = parseInt(document.getElementById("inputNum").value);
@@ -32,8 +35,8 @@
                     result.push(i);
                 }
             }
-            
             console.log(result);
+            document.getElementById("resultLabel").innerText = result;
         }
 
         function clearLast(){
